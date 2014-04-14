@@ -16,6 +16,7 @@ module Netzke
             { layout: :fit,
               wrapped_component: c[:item_id],
               title: c[:title] || c[:item_id].humanize,
+              icon: c[:icon],
               icon_cls: c[:icon_cls],
               disabled: c[:disabled]
             }
