@@ -50,7 +50,7 @@ module Netzke
           c.xtype = :netzkeactioncolumn
 
           c[:getter] = lambda do |r|
-            Oj.dump(c.actions.map {|a| build_action_config(a)}.netzke_jsonify)
+            ActiveSupport::JSON.encode(c.actions.map {|a| build_action_config(a)}.netzke_jsonify)
           end
         end
 
