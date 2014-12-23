@@ -13,6 +13,10 @@ module Netzke
             self.extend_with(*scope)
           when Hash  # conditions hash
             self.where(scope)
+          when ActionController::Parameters
+            self.where(scope)            
+          when ActiveSupport::HashWithIndifferentAccess # conditions hash
+            self.where(scope)
           when Proc  # receives a relation, must return a relation
             scope.call(self)
           else
