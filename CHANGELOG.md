@@ -1,3 +1,9 @@
+# unreleased
+* A few fixes from AlexKovynev
+
+# 0.10.1 - 2014-06-04
+* Fix Core dependency version
+
 # 0.10.0 - 2014-04-02
 * Rails 4
 
